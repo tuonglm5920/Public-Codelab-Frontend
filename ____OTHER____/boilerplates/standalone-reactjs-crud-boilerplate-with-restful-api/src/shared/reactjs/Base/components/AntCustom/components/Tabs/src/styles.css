@@ -1,0 +1,35 @@
+.Tabs__container {
+  max-height: 100%;
+}
+
+.Tabs__container .yy-tabs-tab {
+  display: block;
+}
+
+.Tabs__auto-fit .yy-tabs-nav-list {
+  width: 100%;
+}
+
+.Tabs__auto-fit .yy-tabs-tab {
+  flex: 1 1 auto;
+}
+
+.Tabs__top .yy-tabs-ink-bar {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.Tabs__bottom .yy-tabs-ink-bar {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.Tabs__left .yy-tabs-ink-bar {
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.Tabs__right .yy-tabs-ink-bar {
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}

@@ -1,0 +1,1828 @@
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Alert/src/styles.css */
+.Alert__container .yy-alert-message {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.Alert__container .yy-alert-icon {
+  font-size: 36px;
+  margin-right: 12px;
+  margin-top: 8px;
+}
+
+/* Bold */
+.Alert--bold .yy-alert-message,
+.Alert--bold .yy-alert-description {
+  color: var(--yy-color-white) !important;
+}
+.Alert--bold.yy-alert-info {
+  background: var(--yy-color-info);
+}
+.Alert--bold.yy-alert-info .yy-alert-icon {
+  color: var(--yy-color-info-bg);
+}
+.Alert--bold.yy-alert-success {
+  background: var(--yy-color-success-active);
+}
+.Alert--bold.yy-alert-success .yy-alert-icon {
+  color: var(--yy-color-success-bg);
+}
+.Alert--bold.yy-alert-error {
+  background: var(--yy-color-error);
+}
+.Alert--bold.yy-alert-error .yy-alert-icon {
+  color: var(--yy-color-error-bg);
+}
+.Alert--bold.yy-alert-warning {
+  background: var(--yy-color-warning);
+}
+.Alert--bold.yy-alert-warning .yy-alert-icon {
+  color: var(--yy-color-warning-bg);
+}
+.Alert--bold.Alert--primary {
+  background: var(--yy-color-primary);
+}
+.Alert--bold.Alert--primary .yy-alert-icon {
+  color: var(--yy-color-primary-bg);
+}
+
+/* Outline */
+
+.Alert--outline.Alert--primary {
+  background: var(--yy-color-primary-bg);
+  border-color: var(--yy-color-primary);
+}
+.Alert--outline.Alert--primary .yy-alert-icon {
+  color: var(--yy-color-primary);
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/AutoComplete/src/styles.css */
+.AutoComplete__container {
+  width: 100%;
+}
+
+.AutoComplete__loading {
+  padding-bottom: 16px;
+  padding-top: 16px;
+  text-align: center;
+}
+
+.AutoComplete__readOnly {
+  pointer-events: none;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Breadcrumb/src/styles.css */
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Button/src/css/button-default.css */
+/* Color for type button */
+.Button__container.yy-btn-default.Button--primary:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost) {
+  background-color: var(--yy-color-primary);
+  border-color: var(--yy-color-primary);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-default.Button--primary:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):hover {
+  background-color: var(--yy-color-primary-hover);
+  border-color: var(--yy-color-primary-hover);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-default.Button--primary:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):active {
+  background-color: var(--yy-color-primary-active);
+  border-color: var(--yy-color-primary-active);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-default.Button--primary .ant-wave {
+  background-color: var(--yy-color-primary-bg);
+}
+
+.Button__container.yy-btn-default.Button--success:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost) {
+  background-color: var(--yy-color-success);
+  border-color: var(--yy-color-success);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-default.Button--success:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):hover {
+  background-color: var(--yy-color-success-hover);
+  border-color: var(--yy-color-success-hover);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-default.Button--success:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):active {
+  background-color: var(--yy-color-success-active);
+  border-color: var(--yy-color-success-active);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-default.Button--success .ant-wave {
+  background-color: var(--yy-color-success-bg);
+}
+
+.Button__container.yy-btn-default.Button--error:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost) {
+  background-color: var(--yy-color-error);
+  border-color: var(--yy-color-error);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-default.Button--error:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):hover {
+  background-color: var(--yy-color-error-hover);
+  border-color: var(--yy-color-error-hover);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-default.Button--error:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):active {
+  background-color: var(--yy-color-error-active);
+  border-color: var(--yy-color-error-active);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-default.Button--error .ant-wave {
+  background-color: var(--yy-color-error-bg);
+}
+
+.Button__container.yy-btn-default.Button--info:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost) {
+  background-color: var(--yy-color-info);
+  border-color: var(--yy-color-info);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-default.Button--info:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):hover {
+  background-color: var(--yy-color-info-hover);
+  border-color: var(--yy-color-info-hover);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-default.Button--info:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):active {
+  background-color: var(--yy-color-info-active);
+  border-color: var(--yy-color-info-active);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-default.Button--info .ant-wave {
+  background-color: var(--yy-color-info-bg);
+}
+
+.Button__container.yy-btn-default.Button--warning:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost) {
+  background-color: var(--yy-color-warning);
+  border-color: var(--yy-color-warning);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-default.Button--warning:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):hover {
+  background-color: var(--yy-color-warning-hover);
+  border-color: var(--yy-color-warning-hover);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-default.Button--warning:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):active {
+  background-color: var(--yy-color-warning-active);
+  border-color: var(--yy-color-warning-active);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-default.Button--warning .ant-wave {
+  background-color: var(--yy-color-warning-bg);
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Button/src/css/button-ghost.css */
+/* Ghost */
+.Button__container.yy-btn-background-ghost.Button--default:not(:disabled):not(
+    .yy-btn-disabled
+  ) {
+  border-color: var(--yy-button-default-border-color);
+  color: var(--yy-color-text);
+}
+.Button__container.yy-btn-background-ghost.Button--default:not(:disabled):not(
+    .yy-btn-disabled
+  ):hover {
+  border-color: var(--yy-button-default-border-primary-hover);
+  color: var(--yy-color-primary-hover);
+}
+.Button__container.yy-btn-background-ghost.Button--default:not(:disabled):not(
+    .yy-btn-disabled
+  ):active {
+  border-color: var(--yy-button-default-border-primary-active);
+  color: var(--yy-color-primary-active);
+}
+
+.Button__container.yy-btn-background-ghost.Button--primary:not(:disabled):not(
+    .yy-btn-disabled
+  ) {
+  border-color: var(--yy-button-primary-border-color);
+  color: var(--yy-color-primary);
+}
+.Button__container.yy-btn-background-ghost.Button--primary:not(:disabled):not(
+    .yy-btn-disabled
+  ):hover {
+  border-color: var(--yy-button-primary-border-primary-hover);
+  color: var(--yy-color-primary-hover);
+}
+.Button__container.yy-btn-background-ghost.Button--primary:not(:disabled):not(
+    .yy-btn-disabled
+  ):active {
+  border-color: var(--yy-button-primary-border-primary-active);
+  color: var(--yy-color-primary-active);
+}
+
+.Button__container.yy-btn-background-ghost.Button--success:not(:disabled):not(
+    .yy-btn-disabled
+  ) {
+  border-color: var(--yy-button-success-border-color);
+  color: var(--yy-color-success);
+}
+.Button__container.yy-btn-background-ghost.Button--success:not(:disabled):not(
+    .yy-btn-disabled
+  ):hover {
+  border-color: var(--yy-button-success-border-success-hover);
+  color: var(--yy-color-success-hover);
+}
+.Button__container.yy-btn-background-ghost.Button--success:not(:disabled):not(
+    .yy-btn-disabled
+  ):active {
+  border-color: var(--yy-button-success-border-success-active);
+  color: var(--yy-color-success-active);
+}
+
+.Button__container.yy-btn-background-ghost.Button--error:not(:disabled):not(
+    .yy-btn-disabled
+  ) {
+  border-color: var(--yy-button-error-border-color);
+  color: var(--yy-color-error);
+}
+.Button__container.yy-btn-background-ghost.Button--error:not(:disabled):not(
+    .yy-btn-disabled
+  ):hover {
+  border-color: var(--yy-button-error-border-error-hover);
+  color: var(--yy-color-error-hover);
+}
+.Button__container.yy-btn-background-ghost.Button--error:not(:disabled):not(
+    .yy-btn-disabled
+  ):active {
+  border-color: var(--yy-button-error-border-error-active);
+  color: var(--yy-color-error-active);
+}
+
+.Button__container.yy-btn-background-ghost.Button--info:not(:disabled):not(
+    .yy-btn-disabled
+  ) {
+  border-color: var(--yy-button-info-border-color);
+  color: var(--yy-color-info);
+}
+.Button__container.yy-btn-background-ghost.Button--info:not(:disabled):not(
+    .yy-btn-disabled
+  ):hover {
+  border-color: var(--yy-button-info-border-info-hover);
+  color: var(--yy-color-info-hover);
+}
+.Button__container.yy-btn-background-ghost.Button--info:not(:disabled):not(
+    .yy-btn-disabled
+  ):active {
+  border-color: var(--yy-button-info-border-info-active);
+  color: var(--yy-color-info-active);
+}
+
+.Button__container.yy-btn-background-ghost.Button--warning:not(:disabled):not(
+    .yy-btn-disabled
+  ) {
+  border-color: var(--yy-button-warning-border-color);
+  color: var(--yy-color-warning);
+}
+.Button__container.yy-btn-background-ghost.Button--warning:not(:disabled):not(
+    .yy-btn-disabled
+  ):hover {
+  border-color: var(--yy-button-warning-border-warning-hover);
+  color: var(--yy-color-warning-hover);
+}
+.Button__container.yy-btn-background-ghost.Button--warning:not(:disabled):not(
+    .yy-btn-disabled
+  ):active {
+  border-color: var(--yy-button-warning-border-warning-active);
+  color: var(--yy-color-warning-active);
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Button/src/css/button-link.css */
+/* Color for type link */
+.Button__container.Button--link.yy-btn-link {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.Button__container.Button--link.yy-btn-link:not(:disabled):not(
+    .yy-btn-disabled
+  ):hover
+  span {
+  text-decoration: underline;
+}
+
+.Button__container.Button--link.yy-btn-link.Button--primary:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost) {
+  color: var(--yy-color-primary);
+}
+.Button__container.Button--link.yy-btn-link.Button--primary:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):hover {
+  color: var(--yy-color-primary-hover);
+}
+.Button__container.Button--link.yy-btn-link.Button--primary:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):active {
+  color: var(--yy-color-primary-active);
+}
+
+.Button__container.Button--link.yy-btn-link.Button--success:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost) {
+  color: var(--yy-color-success);
+}
+.Button__container.Button--link.yy-btn-link.Button--success:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):hover {
+  color: var(--yy-color-success-hover);
+}
+.Button__container.Button--link.yy-btn-link.Button--success:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):active {
+  color: var(--yy-color-success-active);
+}
+
+.Button__container.Button--link.yy-btn-link.Button--error:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost) {
+  color: var(--yy-color-error);
+}
+.Button__container.Button--link.yy-btn-link.Button--error:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):hover {
+  color: var(--yy-color-error-hover);
+}
+.Button__container.Button--link.yy-btn-link.Button--error:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):active {
+  color: var(--yy-color-error-active);
+}
+
+.Button__container.Button--link.yy-btn-link.Button--info:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost) {
+  color: var(--yy-color-info);
+}
+.Button__container.Button--link.yy-btn-link.Button--info:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):hover {
+  color: var(--yy-color-info-hover);
+}
+.Button__container.Button--link.yy-btn-link.Button--info:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):active {
+  color: var(--yy-color-info-active);
+}
+
+.Button__container.Button--link.yy-btn-link.Button--warning:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost) {
+  color: var(--yy-color-warning);
+}
+.Button__container.Button--link.yy-btn-link.Button--warning:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):hover {
+  color: var(--yy-color-warning-hover);
+}
+.Button__container.Button--link.yy-btn-link.Button--warning:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):active {
+  color: var(--yy-color-warning-active);
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Button/src/css/button-loading.css */
+.Button__container.yy-btn-loading {
+  gap: 8px;
+  pointer-events: none;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Button/src/css/button-text.css */
+/* Color for type text */
+.Button__container.yy-btn-text.Button--primary:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost) {
+  color: var(--yy-color-primary);
+}
+.Button__container.yy-btn-text.Button--primary:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):hover {
+  background-color: var(--yy-color-primary-hover);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-text.Button--primary:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):active {
+  background-color: var(--yy-color-primary-active);
+  color: var(--yy-color-text-light-solid);
+}
+
+.Button__container.yy-btn-text.Button--success:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost) {
+  color: var(--yy-color-success);
+}
+.Button__container.yy-btn-text.Button--success:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):hover {
+  background-color: var(--yy-color-success-hover);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-text.Button--success:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):active {
+  background-color: var(--yy-color-success-active);
+  color: var(--yy-color-text-light-solid);
+}
+
+.Button__container.yy-btn-text.Button--error:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost) {
+  color: var(--yy-color-error);
+}
+.Button__container.yy-btn-text.Button--error:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):hover {
+  background-color: var(--yy-color-error-hover);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-text.Button--error:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):active {
+  background-color: var(--yy-color-error-active);
+  color: var(--yy-color-text-light-solid);
+}
+
+.Button__container.yy-btn-text.Button--info:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost) {
+  color: var(--yy-color-info);
+}
+.Button__container.yy-btn-text.Button--info:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):hover {
+  background-color: var(--yy-color-info-hover);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-text.Button--info:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):active {
+  background-color: var(--yy-color-info-active);
+  color: var(--yy-color-text-light-solid);
+}
+
+.Button__container.yy-btn-text.Button--warning:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost) {
+  color: var(--yy-color-warning);
+}
+.Button__container.yy-btn-text.Button--warning:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):hover {
+  background-color: var(--yy-color-warning-hover);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-text.Button--warning:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):active {
+  background-color: var(--yy-color-warning-active);
+  color: var(--yy-color-text-light-solid);
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Button/src/css/styles.css */
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Checkbox/src/styles.css */
+.Checkbox__container .yy-checkbox-indeterminate .yy-checkbox-inner::after {
+  border-radius: 2px;
+}
+
+.Checkbox__readOnly {
+  pointer-events: none;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/CheckboxTree/src/styles.css */
+.CheckboxTree__readOnly {
+  pointer-events: none;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Collapse/src/styles.css */
+.Collapse__container:empty {
+  display: none;
+}
+
+.Collapse__container .yy-collapse-header {
+  align-items: center;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/ColorPicker/src/styles.css */
+.ColorPicker__container .yy-color-picker-trigger-text:empty {
+  display: none;
+}
+
+.ColorPicker__container .yy-color-picker-clear::after {
+  width: 1000px;
+}
+.ColorPicker__container.yy-color-picker-trigger-disabled
+  .yy-color-picker-clear {
+  cursor: not-allowed;
+}
+
+.ColorPicker__readOnly {
+  pointer-events: none;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/DayPicker/src/css/RangeDayPicker.css */
+.RangeDayPicker__container {
+  width: 100%;
+}
+
+.RangeDayPicker__popup .yy-picker-time-panel:has(.yy-picker-content:empty) {
+  display: none;
+}
+
+.RangeDayPicker__readOnly {
+  pointer-events: none;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/DayPicker/src/css/SingleDayPicker.css */
+.SingleDayPicker__container {
+  width: 100%;
+}
+
+.SingleDayPicker__popup .yy-picker-time-panel:has(.yy-picker-content:empty) {
+  display: none;
+}
+
+.SingleDayPicker__readOnly {
+  pointer-events: none;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Dropdown/src/styles.css */
+.Dropdown__divider {
+  margin: 0;
+}
+
+.Dropdown__footer {
+  padding: var(--yy-padding-xxs);
+}
+
+.Dropdown__overlay [hidden] {
+  display: none !important;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/FloatButton/src/styles.css */
+.FloatButton__container.yy-float-btn-group-square
+  .yy-float-btn-square:last-child {
+  border-radius: var(--yy-border-radius-lg);
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/ImageFile/src/styles.css */
+.ImageFile__container {
+  align-items: center;
+  background-color: var(--yy-color-fill-alter);
+  border-radius: var(--yy-border-radius-lg);
+  display: inline-flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+}
+
+.ImageFile__delete {
+  align-items: center;
+  background-color: rgba(20, 20, 20, 0.4);
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  height: 32px;
+  justify-content: center;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 32px;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/ImageFilesList/src/css/ImageFilesListHorizontal.css */
+.ImageFilesListHorizontal__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.ImageFilesListHorizontal__item {
+  border: var(--yy-line-width) var(--yy-line-type) var(--yy-color-border);
+  border-radius: var(--yy-border-radius-lg);
+  height: calc(var(--yy-control-height-lg) * 2.55);
+  padding: var(--yy-padding-xs);
+  width: calc(var(--yy-control-height-lg) * 2.55);
+}
+
+.ImageFilesListHorizontal__item .ImageFilesListHorizontal__image {
+  background-color: var(--yy-color-fill-alter);
+  border-radius: var(--yy-border-radius-sm);
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.ImageFilesListHorizontal__item .ImageFilesListHorizontal__image img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.ImageFilesListHorizontal__actions {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.ImageFilesListHorizontal__delete {
+  transition: 0.2s color;
+}
+.ImageFilesListHorizontal__delete:hover {
+  color: var(--yy-color-error);
+}
+
+.ImageFilesListHorizontal__download {
+  transition: 0.2s color;
+}
+.ImageFilesListHorizontal__download:hover {
+  color: var(--yy-color-link);
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/ImageFilesList/src/css/ImageFilesListVertical.css */
+.ImageFilesListVertical__container {
+  --left-width: 48px;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.ImageFilesListVertical__item {
+  align-items: center;
+  border: var(--yy-line-width) var(--yy-line-type) var(--yy-color-border);
+  border-radius: var(--yy-border-radius-lg);
+  display: flex;
+  gap: 8px;
+  padding: var(--yy-padding-xs);
+  position: relative;
+}
+
+.ImageFilesListVertical__left {
+  border-radius: var(--yy-border-radius-sm);
+  flex-grow: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  width: var(--left-width);
+}
+
+.ImageFilesListVertical__right {
+  align-items: center;
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.ImageFilesListVertical__information {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.ImageFilesListVertical__fileName {
+  cursor: pointer;
+  font-weight: 500;
+  max-width: calc(100% - var(--left-width));
+  text-decoration: underline;
+}
+.ImageFilesListVertical__fileName:hover {
+  color: var(--yy-color-primary);
+}
+
+.ImageFilesListVertical__delete {
+  align-items: center;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  position: absolute;
+  right: var(--yy-padding-xs);
+  top: var(--yy-padding-xs);
+  transition: 0.2s background-color;
+  user-select: none;
+  width: 24px;
+}
+
+.ImageFilesListVertical__delete:hover {
+  background-color: var(--yy-color-error-bg);
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Input/src/styles.css */
+.Input__container input {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Input__readOnly {
+  pointer-events: none;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/InputNumber/src/styles.css */
+.InputNumber__container {
+  width: 100%;
+}
+
+.InputNumber__readOnly {
+  pointer-events: none;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/InputOTP/src/styles.css */
+.InputOTP__readOnly {
+  pointer-events: none;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/InputPassword/src/styles.css */
+.InputPassword__readOnly {
+  pointer-events: none;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Layout/src/styles.css */
+.Layout__sider {
+  border-right: 1px solid var(--yy-color-split);
+}
+
+.Layout__header {
+  background-color: #fff;
+  border-bottom: 1px solid var(--yy-color-split);
+  padding-left: var(--yy-padding-lg);
+  padding-right: var(--yy-padding-lg);
+}
+
+.Layout__content {
+  padding: 16px;
+  padding-bottom: 0px !important;
+}
+@media (min-width: 768px) {
+  .Layout__content {
+    padding: 32px;
+  }
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Mentions/src/styles.css */
+.Mentions__readOnly {
+  pointer-events: none;
+}
+
+.Mentions__popup.yy-mentions-dropdown .yy-mentions-dropdown-menu-item-disabled {
+  background-color: initial !important;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/MenuHorizontal/src/styles.css */
+.MenuHorizontal__container.yy-menu {
+  flex: 1 1 auto;
+}
+
+.MenuHorizontal__container.yy-menu {
+  border: none;
+}
+
+.MenuHorizontal__container.yy-menu-root.yy-menu-horizontal .yy-menu-item:hover,
+.MenuHorizontal__container.yy-menu-root.yy-menu-horizontal
+  .yy-menu-submenu:hover
+  .yy-menu-submenu-title {
+  color: var(--yy-menu-horizontal-item-selected-color);
+}
+.MenuHorizontal__container.yy-menu-root.yy-menu-horizontal .yy-menu-item::after,
+.MenuHorizontal__container.yy-menu-root.yy-menu-horizontal
+  .yy-menu-submenu::after {
+  display: none;
+}
+.MenuHorizontal__container.yy-menu-root.yy-menu-horizontal
+  .yy-menu-item-selected::after,
+.MenuHorizontal__container.yy-menu-root.yy-menu-horizontal
+  .yy-menu-submenu-selected::after {
+  display: block;
+}
+
+/* Submenu */
+.MenuHorizontal__submenu.yy-menu .yy-menu.yy-menu-sub.yy-menu-vertical {
+  max-height: initial;
+}
+
+.MenuHorizontal__submenu.yy-menu .yy-menu-item.yy-menu-item-selected {
+  color: var(--yy-menu-item-color);
+}
+
+.MenuHorizontal__submenu.yy-menu .yy-menu-item.yy-menu-item-selected {
+  background-color: initial;
+}
+
+.MenuHorizontal__submenu.yy-menu .yy-menu-item.yy-menu-item-selected:hover,
+.MenuHorizontal__submenu.yy-menu.yy-menu-submenu-popup.yy-menu-submenu
+  .yy-menu-item:active {
+  background-color: var(--yy-menu-item-hover-bg);
+}
+
+.MenuHorizontal__container [hidden] {
+  display: none !important;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/MenuVertical/src/styles.css */
+.MenuVertical__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.MenuVertical__menu.yy-menu-root.yy-menu-inline {
+  border: none;
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
+.MenuVertical__container [hidden] {
+  display: none !important;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Modal/src/styles.css */
+.Modal__container .yy-modal-content {
+  padding: 0;
+}
+
+.Modal__container .yy-modal-header {
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 0;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 16px;
+}
+
+.Modal__container .yy-modal-footer {
+  border-top: 1px solid #d9d9d9;
+  margin-top: 0px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 16px;
+}
+.Modal__container .yy-modal-footer:empty {
+  display: none;
+}
+
+.Modal__container .yy-modal-body {
+  padding-bottom: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 16px;
+}
+
+.Modal__footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Modal__buttons {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.Modal--footerSticky .yy-modal-footer {
+  background-color: inherit;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  bottom: 0px;
+  position: sticky;
+  z-index: 2;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/NormalFile/src/styles.css */
+.NormalFile__container {
+  border: var(--yy-line-width) var(--yy-line-type) var(--yy-color-border);
+  border-radius: var(--yy-border-radius-lg);
+  display: flex;
+  gap: 12px;
+  padding: var(--yy-padding-sm);
+  position: relative;
+}
+
+.NormalFile__information {
+  display: flex;
+  flex: 1;
+  gap: 8px;
+  /* Delete icon + delete position */
+  max-width: calc(100% - 32px - 16px);
+}
+
+.NormalFile__icon {
+  align-items: center;
+  background-color: #f4f5f6;
+  border-radius: 50%;
+  display: flex;
+  flex-basis: 40px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+}
+
+.NormalFile__fileInformation {
+  display: inline-flex;
+  flex: 1;
+  flex-direction: column;
+  /*  Icon + gap between icon & file name */
+  max-width: calc(100% - 40px - 16px);
+}
+
+.NormalFile__fileName {
+  color: var(--yy-color-text);
+  cursor: pointer;
+  font-weight: 500;
+  max-width: min(100%, 300px);
+  overflow: hidden;
+  text-decoration: underline;
+  text-overflow: ellipsis;
+  transition: 0.2s color;
+  white-space: nowrap;
+}
+.NormalFile__fileName:hover {
+  color: var(--yy-color-primary);
+}
+
+.NormalFile__capacity {
+  color: var(--yy-color-text-tertiary);
+  display: inline-block;
+  font-size: 10px;
+  text-decoration: none !important;
+}
+
+.NormalFile__delete {
+  align-items: center;
+  background-color: rgba(20, 20, 20, 0.4);
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  height: 32px;
+  justify-content: center;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 32px;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/NormalFilesList/src/styles.css */
+.NormalFilesList__container:empty {
+  display: none;
+}
+
+.NormalFilesList__container {
+  border: var(--yy-line-width) var(--yy-line-type) var(--yy-color-border);
+  border-radius: var(--yy-border-radius-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.NormalFilesList__item {
+  align-items: center;
+  border-bottom: var(--yy-line-width) var(--yy-line-type) var(--yy-color-border);
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  padding: 12px 8px;
+}
+
+.NormalFilesList__item:last-child {
+  border-bottom: none;
+}
+
+.NormalFilesList__info {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  gap: 8px;
+  /* Line progress width + Delete button + gap between info & delete button & progress */
+  max-width: calc(80% - 16px - 24px);
+}
+
+.NormalFilesList__infoIcon {
+  flex-basis: 16px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.NormalFilesList__fileInfo {
+  display: inline-flex;
+  flex-direction: column;
+  /* Icon + gap between icon & file name */
+  max-width: min(calc(100% - 16px - 12px), 300px);
+}
+.NormalFilesList__fileName {
+  color: var(--yy-color-text);
+  cursor: pointer;
+  font-weight: 500;
+  overflow: hidden;
+  text-decoration: underline;
+  text-overflow: ellipsis;
+  transition: 0.2s color;
+  white-space: nowrap;
+}
+.NormalFilesList__fileName:hover {
+  color: var(--yy-color-primary);
+}
+
+.NormalFilesList__capacity {
+  color: var(--yy-color-text-tertiary);
+  display: inline-block;
+  font-size: 10px;
+  text-decoration: none !important;
+}
+
+.NormalFilesList__progress {
+  align-items: center;
+  display: flex;
+  flex-basis: 20%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 20%;
+}
+
+.NormalFilesList__delete {
+  color: var(--yy-color-text-quaternary);
+  cursor: pointer;
+  flex-basis: 16px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  transition: 0.2s color;
+}
+.NormalFilesList__delete:hover {
+  color: var(--yy-color-error);
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Notification/src/styles.css */
+.yy-notification-notice {
+  border-radius: var(--yy-border-radius-lg) !important;
+}
+.yy-notification-notice-message {
+  font-weight: 500;
+}
+
+.Notification--primary .yy-notification-notice-icon {
+  color: var(--yy-color-primary) !important;
+}
+/* Bold */
+.Notification--bold.yy-notification-notice-info {
+  background-color: var(--yy-color-info) !important;
+}
+.Notification--bold.yy-notification-notice-error {
+  background-color: var(--yy-color-error) !important;
+}
+.Notification--bold.yy-notification-notice-success {
+  background-color: var(--yy-color-success-active) !important;
+}
+.Notification--bold.yy-notification-notice-warning {
+  background-color: var(--yy-color-warning) !important;
+}
+.Notification--bold.Notification--primary {
+  background-color: var(--yy-color-primary) !important;
+}
+
+.Notification--bold .yy-notification-notice-icon,
+.Notification--bold .yy-notification-notice-message,
+.Notification--bold .yy-notification-notice-description,
+.Notification--bold .yy-notification-notice-close {
+  color: var(--yy-color-white) !important;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Pagination/src/styles.css */
+.Pagination__container.yy-pagination {
+  display: inline-block;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Popconfirm/src/styles.css */
+.Popconfirm__overlay .yy-popconfirm-buttons {
+  display: none;
+}
+
+.Popconfirm__overlay .yy-popconfirm-message {
+  margin-bottom: 0px;
+}
+.Popconfirm__overlay .yy-popover-inner {
+  padding: 0px;
+}
+
+.Popup__body {
+  padding: var(--yy-popover-inner-padding);
+}
+
+.Popup__footer {
+  align-items: center;
+  border-top: 1px solid #d9d9d9;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  padding: var(--yy-popover-inner-padding);
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Popover/src/styles.css */
+.Popover__overlay.yy-popover
+  .yy-popover-inner[style*="background"]
+  .yy-popover-inner-content {
+  color: #ffffff;
+}
+
+.Popover__overlay.yy-popover-blue .yy-popover-inner-content,
+.Popover__overlay.yy-popover-purple .yy-popover-inner-content,
+.Popover__overlay.yy-popover-cyan .yy-popover-inner-content,
+.Popover__overlay.yy-popover-green .yy-popover-inner-content,
+.Popover__overlay.yy-popover-magenta .yy-popover-inner-content,
+.Popover__overlay.yy-popover-pink .yy-popover-inner-content,
+.Popover__overlay.yy-popover-red .yy-popover-inner-content,
+.Popover__overlay.yy-popover-orange .yy-popover-inner-content,
+.Popover__overlay.yy-popover-yellow .yy-popover-inner-content,
+.Popover__overlay.yy-popover-volcano .yy-popover-inner-content,
+.Popover__overlay.yy-popover-geekblue .yy-popover-inner-content,
+.Popover__overlay.yy-popover-lime .yy-popover-inner-content,
+.Popover__overlay.yy-popover-gold .yy-popover-inner-content {
+  color: #ffffff;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Radio/src/styles.css */
+.Radio__readOnly {
+  pointer-events: none;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Ribbon/src/styles.css */
+.Ribbon__container {
+  margin-inline: var(--yy-margin-xs);
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Select/src/css/SelectMultiple.css */
+.SelectMultiple__container.yy-select {
+  width: 100%;
+}
+
+.SelectMultiple__loading {
+  padding-bottom: 16px;
+  padding-top: 16px;
+  text-align: center;
+}
+
+.SelectMultiple__readOnly {
+  pointer-events: none;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Select/src/css/SelectSingle.css */
+.SelectSingle__container.yy-select {
+  width: 100%;
+}
+
+.SelectSingle__loading {
+  padding-bottom: 16px;
+  padding-top: 16px;
+  text-align: center;
+}
+
+.SelectSingle__readOnly {
+  pointer-events: none;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Slider/src/css/RangeSlider.css */
+.RangeSlider__readOny {
+  pointer-events: none;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Slider/src/css/SingleSlider.css */
+.SingleSlider__readOnly {
+  pointer-events: none;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Steps/src/styles.css */
+.Steps__container.yy-steps
+  .yy-steps-item
+  > .yy-steps-item-container
+  > .yy-steps-item-tail:after {
+  height: 2px;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Table/src/styles.css */
+/* #region Set every nodes has height full */
+.Table__container.yy-table-wrapper,
+.Table__container.yy-table-wrapper .yy-spin-nested-loading {
+  height: 100%;
+}
+
+.Table__container.yy-table-wrapper .yy-table-pagination {
+  background-color: var(--yy-color-bg-container);
+  border: var(--yy-line-width) var(--yy-line-type) var(--yy-table-border-color);
+  border-bottom-left-radius: var(--yy-table-header-border-radius);
+  border-bottom-right-radius: var(--yy-table-header-border-radius);
+  border-top: none;
+  margin: 0;
+  padding: var(--yy-table-cell-padding-block)
+    var(--yy-table-cell-padding-inline);
+}
+/* #endregion */
+
+/* #region Total text */
+.Table__container.yy-table-wrapper
+  .yy-table-pagination
+  .yy-pagination-total-text {
+  flex-basis: 100%;
+  margin: 0;
+
+  @media (min-width: 768px) {
+    flex: 1 1 0%;
+  }
+}
+
+.Table__text-range--highlight {
+  background-color: transparent;
+  color: var(--yy-table-header-color);
+  color: var(--yy-color-text);
+  font-weight: var(--yy-font-weight-strong);
+  padding: 0px;
+}
+/* #endregion */
+
+/* #region Sticky pagination */
+.Table--paginationSticky.yy-table-wrapper .yy-spin-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.Table--paginationSticky.yy-table-wrapper .yy-table {
+  background-color: transparent;
+  flex: 1;
+}
+.Table--paginationSticky.yy-table-wrapper .yy-table {
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .Table--paginationSticky.yy-table-wrapper .yy-table {
+    margin-bottom: 32px;
+  }
+}
+
+.Table--paginationSticky.yy-table-wrapper .yy-table-container {
+  background-color: var(--yy-color-bg-container);
+}
+
+.Table--paginationSticky.yy-table-wrapper .yy-table-pagination {
+  border: none;
+  border-radius: 0;
+  border-top: var(--yy-line-width) var(--yy-line-type)
+    var(--yy-table-border-color);
+  bottom: 0;
+  flex-shrink: 0;
+  justify-content: center;
+  position: sticky;
+  text-align: center;
+  z-index: 10;
+  @media (min-width: 768px) {
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+/* #endregion */
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Tabs/src/styles.css */
+.Tabs__container {
+  max-height: 100%;
+}
+
+.Tabs__container .yy-tabs-tab {
+  display: block;
+}
+
+.Tabs__auto-fit .yy-tabs-nav-list {
+  width: 100%;
+}
+
+.Tabs__auto-fit .yy-tabs-tab {
+  flex: 1 1 auto;
+}
+
+.Tabs__top .yy-tabs-ink-bar {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.Tabs__bottom .yy-tabs-ink-bar {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.Tabs__left .yy-tabs-ink-bar {
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.Tabs__right .yy-tabs-ink-bar {
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Textarea/src/styles.css */
+.Textarea__readOnly {
+  pointer-events: none;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/TimePicker/src/css/RangeTimePicker.css */
+.RangeTimePicker__container {
+  width: 100%;
+}
+
+.RangeTimePicker__popup .yy-picker-time-panel:has(.yy-picker-content:empty) {
+  display: none;
+}
+
+.RangeTimePicker__readOnly {
+  pointer-events: none;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/TimePicker/src/css/SingleTimePicker.css */
+.SingleTimePicker__container {
+  width: 100%;
+}
+
+.SingleTimePicker__popup .yy-picker-time-panel:has(.yy-picker-content:empty) {
+  display: none;
+}
+
+.SingleTimePicker__readOnly {
+  pointer-events: none;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/Tooltip/src/styles.css */
+.Tooltip__overlay.yy-tooltip {
+  max-width: initial;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/TreeSelect/src/css/TreeSelectMultiple.css */
+.TreeSelectMultiple__readOnly {
+  pointer-events: none;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/components/TreeSelect/src/css/TreeSelectSingle.css */
+.TreeSelectSingle__readOnly {
+  pointer-events: none;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/AntCustom/helpers/FixSSR/src/ImplicitFixSSR/src/styles.css */
+.ImplicitFixSSR__App,
+.ImplicitFixSSR__LoadingScreen {
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes ImplicitFixSSR__fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.ImplicitFixSSR__fadeInUp {
+  animation-name: ImplicitFixSSR__fadeInUp;
+}
+
+@keyframes ImplicitFixSSR__fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.ImplicitFixSSR__fadeIn {
+  animation-name: ImplicitFixSSR__fadeIn;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/CheckboxGroup/src/styles.css */
+.CheckboxGroup__container {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/Empty/src/styles.css */
+.Empty__container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+
+.Empty__description {
+  margin-top: 8px;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/Field/src/styles.css */
+.Field__container {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.Field__label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  scroll-margin-top: 100px;
+}
+
+.Field__required-mark {
+  color: rgb(255, 77, 79);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-left: 4px;
+}
+
+.Field__error {
+  color: rgb(255, 77, 79);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.Field__help {
+  color: rgb(115, 115, 115);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/FixedProgressLoader/src/styles.css */
+.FixedProgressLoader__container {
+  height: 4px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 50;
+}
+
+.FixedProgressLoader__bar {
+  background-color: var(--yy-color-primary);
+  height: 100%;
+}
+
+.FixedProgressLoader__container--hidden {
+  visibility: hidden;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/ImportData/src/styles.css */
+.ImportData__dragger {
+  display: block;
+  height: 120px;
+}
+
+.ImportData__previewFileContainer {
+  border: 1px solid #d9d9d9;
+  border-radius: var(--yy-border-radius);
+  display: flex;
+  min-height: 68px;
+  overflow: hidden;
+}
+
+.ImportData__previewFileIcon {
+  align-items: center;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 68px;
+}
+
+.ImportData__previewFileInfo {
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+  gap: 8px;
+  justify-content: space-between;
+  max-width: calc(100% - 68px);
+  padding: 8px;
+}
+
+.ImportData__fileName {
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ImportData__replaceFileButton {
+  flex-shrink: 0;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/Loading/src/styles.css */
+.Loading__container {
+  animation: Loading__spin 1s linear infinite;
+  border-radius: 50%;
+  border-right: 3px solid transparent;
+  border-top: 3px solid currentColor;
+  box-sizing: border-box;
+  display: inline-block;
+  height: var(--Loading-size);
+  width: var(--Loading-size);
+}
+
+@keyframes Loading__spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/ModalDelete/src/styles.css */
+.ModalDelete__container {
+  display: flex;
+  gap: 12px;
+}
+
+.ModalDelete__title {
+  color: var(--yy-modal-title-color);
+  font-size: var(--yy-modal-title-font-size);
+  font-weight: var(--yy-font-weight-strong);
+  margin-bottom: 4px;
+}
+
+.ModalDelete__description {
+  color: var(--yy-color-text-tertiary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ModalDelete__icon {
+  align-items: center;
+  color: var(--yy-color-error);
+  display: flex;
+  font-size: 24px;
+  height: 40px;
+  justify-content: center;
+  position: relative;
+  width: 40px;
+}
+
+.ModalDelete__icon::before {
+  background-color: currentColor;
+  border-radius: 50%;
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: 0.1;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/QRScanner/src/styles.css */
+.QRScanner__container {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateY(-100%);
+  will-change: transform;
+  z-index: 50;
+}
+
+.QRScanner__openning--down {
+  animation: QRScanner__slideInDown 0.3s forwards;
+}
+@keyframes QRScanner__slideInDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+.QRScanner__closing--down {
+  animation: QRScanner__slideOutDown 0.3s forwards;
+}
+@keyframes QRScanner__slideOutDown {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.QRScanner__openning--up {
+  animation: QRScanner__slideInUp 0.3s forwards;
+}
+@keyframes QRScanner__slideInUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+.QRScanner__closing--up {
+  animation: QRScanner__slideOutUp 0.3s forwards;
+}
+@keyframes QRScanner__slideOutUp {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.QRScanner__close {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: none;
+  padding: 8px;
+  position: absolute;
+  top: 8px;
+}
+.QRScanner__close--left {
+  left: 8px;
+}
+.QRScanner__close--right {
+  right: 8px;
+}
+.QRScanner__closeIcon {
+  color: #fff;
+  font-size: 24px;
+}
+.QRScanner__openning .QRScanner__close {
+  display: block;
+}
+
+.QRScanner__content {
+  aspect-ratio: 500 / 281.25;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 8px;
+  max-width: 800px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.QRScanner__scanner {
+  width: 100%;
+}
+
+.QRScanner__loading,
+.QRScanner__failure {
+  align-items: center;
+  bottom: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  padding: 8px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/TableActions/src/styles.css */
+.TableActions__container {
+  align-items: center;
+  border: 1px solid rgb(212 212 212);
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  height: 24px;
+  justify-content: center;
+  width: 24px;
+}
+
+
+/* Extracted from app/shared/reactjs/Base/components/TinyEditor/src/styles.css */
+.TinyEditor__container .tox .tox-edit-area::before {
+  display: none !important;
+}
+
+.TinyEditor__container .tox-statusbar {
+  display: none !important;
+}
+
+.TinyEditor__container .tox.tox-tinymce {
+  border-radius: var(--yy-border-radius) !important;
+  transition: 0.2s border !important;
+}
+.TinyEditor__container .tox.tox-tinymce.tox-edit-focus {
+  border-color: var(--yy-color-primary) !important;
+}
+
+

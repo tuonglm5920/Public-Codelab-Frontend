@@ -1,0 +1,7 @@
+.InputNumber__container {
+  width: 100%;
+}
+
+.InputNumber__readOnly {
+  pointer-events: none;
+}

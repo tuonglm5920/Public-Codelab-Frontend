@@ -1,0 +1,23 @@
+.Popconfirm__overlay .yy-popconfirm-buttons {
+  display: none;
+}
+
+.Popconfirm__overlay .yy-popconfirm-message {
+  margin-bottom: 0px;
+}
+.Popconfirm__overlay .yy-popover-inner {
+  padding: 0px;
+}
+
+.Popup__body {
+  padding: var(--yy-popover-inner-padding);
+}
+
+.Popup__footer {
+  align-items: center;
+  border-top: 1px solid #d9d9d9;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  padding: var(--yy-popover-inner-padding);
+}

@@ -1,0 +1,8 @@
+{
+  "ignoreFiles": ["**/*"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "at-rule-no-unknown": [true, { "ignoreAtRules": ["tailwind", "apply"] }],
+    "order/properties-alphabetical-order": true
+  }
+}

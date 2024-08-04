@@ -1,0 +1,15 @@
+.ColorPicker__container .yy-color-picker-trigger-text:empty {
+  display: none;
+}
+
+.ColorPicker__container .yy-color-picker-clear::after {
+  width: 1000px;
+}
+.ColorPicker__container.yy-color-picker-trigger-disabled
+  .yy-color-picker-clear {
+  cursor: not-allowed;
+}
+
+.ColorPicker__readOnly {
+  pointer-events: none;
+}

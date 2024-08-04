@@ -1,0 +1,9 @@
+.Input__container input {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Input__readOnly {
+  pointer-events: none;
+}

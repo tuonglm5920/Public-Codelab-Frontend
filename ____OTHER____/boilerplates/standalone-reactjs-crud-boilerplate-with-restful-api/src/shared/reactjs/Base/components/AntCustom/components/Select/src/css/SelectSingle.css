@@ -1,0 +1,13 @@
+.SelectSingle__container.yy-select {
+  width: 100%;
+}
+
+.SelectSingle__loading {
+  padding-bottom: 16px;
+  padding-top: 16px;
+  text-align: center;
+}
+
+.SelectSingle__readOnly {
+  pointer-events: none;
+}

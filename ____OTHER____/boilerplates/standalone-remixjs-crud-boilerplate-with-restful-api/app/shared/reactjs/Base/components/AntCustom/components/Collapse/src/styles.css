@@ -1,0 +1,7 @@
+.Collapse__container:empty {
+  display: none;
+}
+
+.Collapse__container .yy-collapse-header {
+  align-items: center;
+}

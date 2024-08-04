@@ -1,0 +1,11 @@
+.SingleDayPicker__container {
+  width: 100%;
+}
+
+.SingleDayPicker__popup .yy-picker-time-panel:has(.yy-picker-content:empty) {
+  display: none;
+}
+
+.SingleDayPicker__readOnly {
+  pointer-events: none;
+}

@@ -1,0 +1,3699 @@
+{
+  "graph": {
+    "nodes": {
+      "express-for-boilerplates-with-restful-api": {
+        "name": "express-for-boilerplates-with-restful-api",
+        "type": "lib",
+        "data": {
+          "root": "____OTHER____/express-for-boilerplates-with-restful-api",
+          "targets": {
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "____OTHER____/express-for-boilerplates-with-restful-api",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            }
+          },
+          "name": "express-for-boilerplates-with-restful-api",
+          "implicitDependencies": [],
+          "tags": []
+        }
+      },
+      "reactjs-crud-boilerplate-with-restful-api": {
+        "name": "reactjs-crud-boilerplate-with-restful-api",
+        "type": "app",
+        "data": {
+          "root": "apps/reactjs-crud-boilerplate-with-restful-api",
+          "name": "reactjs-crud-boilerplate-with-restful-api",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/reactjs-crud-boilerplate-with-restful-api",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "build": {
+              "executor": "@nx/vite:build",
+              "outputs": [
+                "{projectRoot}/{options.outputPath}"
+              ],
+              "options": {
+                "outputPath": "apps/reactjs-crud-boilerplate-with-restful-api/dist"
+              },
+              "configurations": {}
+            },
+            "dev": {
+              "executor": "@nx/vite:dev-server",
+              "options": {
+                "buildTarget": "reactjs-crud-boilerplate-with-restful-api:build"
+              },
+              "configurations": {}
+            },
+            "preview": {
+              "executor": "@nx/vite:preview-server",
+              "options": {
+                "buildTarget": "reactjs-crud-boilerplate-with-restful-api:build"
+              },
+              "configurations": {}
+            },
+            "serve-static": {
+              "executor": "@nx/web:file-server",
+              "options": {
+                "buildTarget": "reactjs-crud-boilerplate-with-restful-api:build"
+              },
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/reactjs-crud-boilerplate-with-restful-api/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/reactjs-crud-boilerplate-with-restful-api",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "apps/reactjs-crud-boilerplate-with-restful-api/src",
+          "projectType": "application",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "remixjs-crud-boilerplate-with-restful-api": {
+        "name": "remixjs-crud-boilerplate-with-restful-api",
+        "type": "app",
+        "data": {
+          "root": "apps/remixjs-crud-boilerplate-with-restful-api",
+          "name": "remixjs-crud-boilerplate-with-restful-api",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/remixjs-crud-boilerplate-with-restful-api",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "stylelint": {
+              "executor": "nx-stylelint:lint",
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.stylelintrc(.(json|yml|yaml|js))?"
+              ],
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/remixjs-crud-boilerplate-with-restful-api/**/*.css"
+                ],
+                "fix": true,
+                "formatter": "compact"
+              },
+              "configurations": {}
+            },
+            "prebuild": {
+              "options": {
+                "cwd": "apps/remixjs-crud-boilerplate-with-restful-api",
+                "command": "cross-env NODE_ENV=production ts-node --project ./tsconfig.antd.json ./scripts/genAntdCss.tsx"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "build": {
+              "dependsOn": [
+                "prebuild"
+              ],
+              "options": {
+                "cwd": "apps/remixjs-crud-boilerplate-with-restful-api",
+                "command": "remix build"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "start": {
+              "options": {
+                "cwd": "apps/remixjs-crud-boilerplate-with-restful-api",
+                "command": "remix-serve ./build/index.js"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "predev": {
+              "options": {
+                "cwd": "apps/remixjs-crud-boilerplate-with-restful-api",
+                "command": "ts-node --project tsconfig.antd.json scripts/genAntdCss.tsx"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "dev": {
+              "dependsOn": [
+                "predev"
+              ],
+              "options": {
+                "cwd": "apps/remixjs-crud-boilerplate-with-restful-api",
+                "command": "remix dev --manual"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/remixjs-crud-boilerplate-with-restful-api/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/remixjs-crud-boilerplate-with-restful-api",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "projectType": "application",
+          "sourceRoot": "apps/remixjs-crud-boilerplate-with-restful-api/src",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "undefined": {
+        "name": "undefined",
+        "type": "lib",
+        "data": {
+          "root": "____OTHER____/boilerplates/remixjs-boilerplate",
+          "targets": {
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "____OTHER____/boilerplates/remixjs-boilerplate",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            }
+          },
+          "implicitDependencies": [],
+          "tags": []
+        }
+      },
+      "simple-remixjs-with-https-electron": {
+        "name": "simple-remixjs-with-https-electron",
+        "type": "app",
+        "data": {
+          "root": "apps/simple-remixjs-with-https-electron",
+          "name": "simple-remixjs-with-https-electron",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/simple-remixjs-with-https-electron",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "clean": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-remixjs-with-https-electron",
+                "command": "del-cli dist desktop/build public/build"
+              },
+              "configurations": {}
+            },
+            "dependenciesCopier": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "",
+                "command": "node scripts/electron-builder/dependenciesCopier.js apps/simple-remixjs-with-https-electron/package.json",
+                "parallel": false
+              },
+              "configurations": {}
+            },
+            "build": {
+              "dependsOn": [
+                "dependenciesCopier",
+                "clean"
+              ],
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-remixjs-with-https-electron",
+                "commands": [
+                  "remix build",
+                  "electron-builder"
+                ],
+                "parallel": false
+              },
+              "configurations": {}
+            },
+            "start": {
+              "dependsOn": [
+                "build"
+              ],
+              "options": {
+                "cwd": "apps/simple-remixjs-with-https-electron",
+                "command": "electron ."
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "dev": {
+              "dependsOn": [
+                "dependenciesCopier",
+                "clean"
+              ],
+              "executor": "nx:run-commands",
+              "options": {
+                "command": "remix dev --command \"nodemon .\" --manual",
+                "cwd": "apps/simple-remixjs-with-https-electron"
+              },
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs-with-https-electron/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-remixjs-with-https-electron",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "projectType": "application",
+          "sourceRoot": "apps/simple-remixjs-with-https-electron",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "simple-remixjs-with-http-electron": {
+        "name": "simple-remixjs-with-http-electron",
+        "type": "app",
+        "data": {
+          "root": "apps/simple-remixjs-with-http-electron",
+          "name": "simple-remixjs-with-http-electron",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/simple-remixjs-with-http-electron",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "clean": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-remixjs-with-http-electron",
+                "command": "del-cli dist desktop/build public/build"
+              },
+              "configurations": {}
+            },
+            "dependenciesCopier": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "",
+                "command": "node scripts/electron-builder/dependenciesCopier.js apps/simple-remixjs-with-http-electron/package.json",
+                "parallel": false
+              },
+              "configurations": {}
+            },
+            "build": {
+              "dependsOn": [
+                "dependenciesCopier",
+                "clean"
+              ],
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-remixjs-with-http-electron",
+                "commands": [
+                  "remix build",
+                  "electron-builder"
+                ],
+                "parallel": false
+              },
+              "configurations": {}
+            },
+            "start": {
+              "dependsOn": [
+                "build"
+              ],
+              "options": {
+                "cwd": "apps/simple-remixjs-with-http-electron",
+                "command": "electron ."
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "dev": {
+              "dependsOn": [
+                "dependenciesCopier",
+                "clean"
+              ],
+              "executor": "nx:run-commands",
+              "options": {
+                "command": "remix dev --command \"nodemon .\" --manual",
+                "cwd": "apps/simple-remixjs-with-http-electron"
+              },
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs-with-http-electron/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-remixjs-with-http-electron",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "projectType": "application",
+          "sourceRoot": "apps/simple-remixjs-with-http-electron",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "simple-remixjs-with-toast-server": {
+        "name": "simple-remixjs-with-toast-server",
+        "type": "app",
+        "data": {
+          "root": "apps/simple-remixjs-with-toast-server",
+          "name": "simple-remixjs-with-toast-server",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/simple-remixjs-with-toast-server",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "stylelint": {
+              "executor": "nx-stylelint:lint",
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.stylelintrc(.(json|yml|yaml|js))?"
+              ],
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs-with-toast-server/**/*.css"
+                ],
+                "fix": true,
+                "formatter": "compact"
+              },
+              "configurations": {}
+            },
+            "build": {
+              "options": {
+                "cwd": "apps/simple-remixjs-with-toast-server",
+                "command": "remix build"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "start": {
+              "dependsOn": [
+                "build"
+              ],
+              "options": {
+                "cwd": "apps/simple-remixjs-with-toast-server",
+                "command": "remix-serve ./build/index.js"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "dev": {
+              "options": {
+                "cwd": "apps/simple-remixjs-with-toast-server",
+                "command": "remix dev --manual"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs-with-toast-server/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-remixjs-with-toast-server",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "projectType": "application",
+          "sourceRoot": "apps/simple-remixjs-with-toast-server/src",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "simple-remix-vite-with-vercel": {
+        "name": "simple-remix-vite-with-vercel",
+        "type": "app",
+        "data": {
+          "root": "apps/simple-remix-vite-with-vercel",
+          "name": "simple-remix-vite-with-vercel",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/simple-remix-vite-with-vercel",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "stylelint": {
+              "executor": "nx-stylelint:lint",
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.stylelintrc(.(json|yml|yaml|js))?"
+              ],
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remix-vite-with-vercel/**/*.css"
+                ],
+                "fix": true,
+                "formatter": "compact"
+              },
+              "configurations": {}
+            },
+            "build": {
+              "options": {
+                "cwd": "apps/simple-remix-vite-with-vercel",
+                "command": "remix vite:build"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "start": {
+              "dependsOn": [
+                "build"
+              ],
+              "options": {
+                "cwd": "apps/simple-remix-vite-with-vercel",
+                "command": "remix-serve ./build/server/index.js"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "dev": {
+              "options": {
+                "cwd": "apps/simple-remix-vite-with-vercel",
+                "command": "remix vite:dev"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remix-vite-with-vercel/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-remix-vite-with-vercel",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "projectType": "application",
+          "sourceRoot": "apps/simple-remix-vite-with-vercel/src",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "simple-remixjs-with-capacitor": {
+        "name": "simple-remixjs-with-capacitor",
+        "type": "app",
+        "data": {
+          "root": "apps/simple-remixjs-with-capacitor",
+          "name": "simple-remixjs-with-capacitor",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/simple-remixjs-with-capacitor",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "stylelint": {
+              "executor": "nx-stylelint:lint",
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.stylelintrc(.(json|yml|yaml|js))?"
+              ],
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs-with-capacitor/**/*.css"
+                ],
+                "fix": true,
+                "formatter": "compact"
+              },
+              "configurations": {}
+            },
+            "build": {
+              "options": {
+                "cwd": "apps/simple-remixjs-with-capacitor",
+                "command": "remix build"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "start": {
+              "dependsOn": [
+                "build"
+              ],
+              "options": {
+                "cwd": "apps/simple-remixjs-with-capacitor",
+                "command": "remix-serve ./build/index.js"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "dev": {
+              "options": {
+                "cwd": "apps/simple-remixjs-with-capacitor",
+                "command": "remix dev --manual"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs-with-capacitor/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-remixjs-with-capacitor",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            },
+            "run-ios": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-remixjs-with-capacitor",
+                "commands": [
+                  "rimraf ./ios",
+                  "nx build simple-remixjs-with-capacitor",
+                  "capacitor add ios",
+                  "capacitor run ios --target=E3F9F201-28C4-4BFE-B0DB-AB8564B1C002",
+                  "nx start simple-remixjs-with-capacitor"
+                ],
+                "parallel": false
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "projectType": "application",
+          "sourceRoot": "apps/simple-remixjs-with-capacitor/src",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "simple-remixjs-with-auth-2fa": {
+        "name": "simple-remixjs-with-auth-2fa",
+        "type": "app",
+        "data": {
+          "root": "apps/simple-remixjs-with-auth-2fa",
+          "name": "simple-remixjs-with-auth-2fa",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/simple-remixjs-with-auth-2fa",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "stylelint": {
+              "executor": "nx-stylelint:lint",
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.stylelintrc(.(json|yml|yaml|js))?"
+              ],
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs-with-auth-2fa/**/*.css"
+                ],
+                "fix": true,
+                "formatter": "compact"
+              },
+              "configurations": {}
+            },
+            "build": {
+              "options": {
+                "cwd": "apps/simple-remixjs-with-auth-2fa",
+                "command": "remix build"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "start": {
+              "dependsOn": [
+                "build"
+              ],
+              "options": {
+                "cwd": "apps/simple-remixjs-with-auth-2fa",
+                "command": "remix-serve ./build/index.js"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "dev": {
+              "options": {
+                "cwd": "apps/simple-remixjs-with-auth-2fa",
+                "command": "remix dev --manual"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs-with-auth-2fa/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-remixjs-with-auth-2fa",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "projectType": "application",
+          "sourceRoot": "apps/simple-remixjs-with-auth-2fa/src",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "simple-remixjs-with-graphql": {
+        "name": "simple-remixjs-with-graphql",
+        "type": "app",
+        "data": {
+          "root": "apps/simple-remixjs-with-graphql",
+          "name": "simple-remixjs-with-graphql",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/simple-remixjs-with-graphql",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "stylelint": {
+              "executor": "nx-stylelint:lint",
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.stylelintrc(.(json|yml|yaml|js))?"
+              ],
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs-with-graphql/**/*.css"
+                ],
+                "fix": true,
+                "formatter": "compact"
+              },
+              "configurations": {}
+            },
+            "graphql-codegen": {
+              "options": {
+                "cwd": "apps/simple-remixjs-with-graphql",
+                "command": "graphql-codegen --config codegen.ts -r dotenv/config"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "build": {
+              "options": {
+                "cwd": "apps/simple-remixjs-with-graphql",
+                "command": "remix build"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "start": {
+              "dependsOn": [
+                "build"
+              ],
+              "options": {
+                "cwd": "apps/simple-remixjs-with-graphql",
+                "command": "remix-serve ./build/index.js"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "dev": {
+              "options": {
+                "cwd": "apps/simple-remixjs-with-graphql",
+                "command": "remix dev --manual"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs-with-graphql/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-remixjs-with-graphql",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "projectType": "application",
+          "sourceRoot": "apps/simple-remixjs-with-graphql/src",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "simple-remixjs-with-sitemap": {
+        "name": "simple-remixjs-with-sitemap",
+        "type": "app",
+        "data": {
+          "root": "apps/simple-remixjs-with-sitemap",
+          "name": "simple-remixjs-with-sitemap",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/simple-remixjs-with-sitemap",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "stylelint": {
+              "executor": "nx-stylelint:lint",
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.stylelintrc(.(json|yml|yaml|js))?"
+              ],
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs-with-sitemap/**/*.css"
+                ],
+                "fix": true,
+                "formatter": "compact"
+              },
+              "configurations": {}
+            },
+            "build": {
+              "options": {
+                "cwd": "apps/simple-remixjs-with-sitemap",
+                "command": "remix build"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "start": {
+              "dependsOn": [
+                "build"
+              ],
+              "options": {
+                "cwd": "apps/simple-remixjs-with-sitemap",
+                "command": "remix-serve ./build/index.js"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "dev": {
+              "options": {
+                "cwd": "apps/simple-remixjs-with-sitemap",
+                "command": "remix dev --manual"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs-with-sitemap/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-remixjs-with-sitemap",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "projectType": "application",
+          "sourceRoot": "apps/simple-remixjs-with-sitemap/src",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "simple-reactjs-with-sentry": {
+        "name": "simple-reactjs-with-sentry",
+        "type": "app",
+        "data": {
+          "root": "apps/simple-reactjs-with-sentry",
+          "name": "simple-reactjs-with-sentry",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/simple-reactjs-with-sentry",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "build": {
+              "executor": "@nx/vite:build",
+              "outputs": [
+                "{projectRoot}/{options.outputPath}"
+              ],
+              "options": {
+                "outputPath": "apps/simple-reactjs-with-sentry/dist"
+              },
+              "configurations": {}
+            },
+            "dev": {
+              "executor": "@nx/vite:dev-server",
+              "options": {
+                "buildTarget": "simple-reactjs-with-sentry:build"
+              },
+              "configurations": {}
+            },
+            "preview": {
+              "executor": "@nx/vite:preview-server",
+              "options": {
+                "buildTarget": "simple-reactjs-with-sentry:build"
+              },
+              "configurations": {}
+            },
+            "serve-static": {
+              "executor": "@nx/web:file-server",
+              "options": {
+                "buildTarget": "simple-reactjs-with-sentry:build"
+              },
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-reactjs-with-sentry/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-reactjs-with-sentry",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "apps/simple-reactjs-with-sentry/src",
+          "projectType": "application",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "simple-reactjs-with-vercel": {
+        "name": "simple-reactjs-with-vercel",
+        "type": "app",
+        "data": {
+          "root": "apps/simple-reactjs-with-vercel",
+          "name": "simple-reactjs-with-vercel",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/simple-reactjs-with-vercel",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "build": {
+              "executor": "@nx/vite:build",
+              "outputs": [
+                "{projectRoot}/{options.outputPath}"
+              ],
+              "options": {
+                "outputPath": "apps/simple-reactjs-with-vercel/dist"
+              },
+              "configurations": {}
+            },
+            "dev": {
+              "executor": "@nx/vite:dev-server",
+              "options": {
+                "buildTarget": "simple-reactjs-with-vercel:build"
+              },
+              "configurations": {}
+            },
+            "preview": {
+              "executor": "@nx/vite:preview-server",
+              "options": {
+                "buildTarget": "simple-reactjs-with-vercel:build"
+              },
+              "configurations": {}
+            },
+            "serve-static": {
+              "executor": "@nx/web:file-server",
+              "options": {
+                "buildTarget": "simple-reactjs-with-vercel:build"
+              },
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-reactjs-with-vercel/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-reactjs-with-vercel",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "apps/simple-reactjs-with-vercel/src",
+          "projectType": "application",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "simple-remixjs-with-sentry": {
+        "name": "simple-remixjs-with-sentry",
+        "type": "app",
+        "data": {
+          "root": "apps/simple-remixjs-with-sentry",
+          "name": "simple-remixjs-with-sentry",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/simple-remixjs-with-sentry",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "stylelint": {
+              "executor": "nx-stylelint:lint",
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.stylelintrc(.(json|yml|yaml|js))?"
+              ],
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs-with-sentry/**/*.css"
+                ],
+                "fix": true,
+                "formatter": "compact"
+              },
+              "configurations": {}
+            },
+            "build": {
+              "options": {
+                "cwd": "apps/simple-remixjs-with-sentry",
+                "command": "remix build"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "start": {
+              "dependsOn": [
+                "build"
+              ],
+              "options": {
+                "cwd": "apps/simple-remixjs-with-sentry",
+                "command": "remix-serve ./build/index.js"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "dev": {
+              "options": {
+                "cwd": "apps/simple-remixjs-with-sentry",
+                "command": "remix dev --manual"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs-with-sentry/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-remixjs-with-sentry",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "projectType": "application",
+          "sourceRoot": "apps/simple-remixjs-with-sentry/src",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "simple-remixjs-with-vercel": {
+        "name": "simple-remixjs-with-vercel",
+        "type": "app",
+        "data": {
+          "root": "apps/simple-remixjs-with-vercel",
+          "name": "simple-remixjs-with-vercel",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/simple-remixjs-with-vercel",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "stylelint": {
+              "executor": "nx-stylelint:lint",
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.stylelintrc(.(json|yml|yaml|js))?"
+              ],
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs-with-vercel/**/*.css"
+                ],
+                "fix": true,
+                "formatter": "compact"
+              },
+              "configurations": {}
+            },
+            "build": {
+              "options": {
+                "cwd": "apps/simple-remixjs-with-vercel",
+                "command": "remix build"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "start": {
+              "dependsOn": [
+                "build"
+              ],
+              "options": {
+                "cwd": "apps/simple-remixjs-with-vercel",
+                "command": "remix-serve ./build/index.js"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "dev": {
+              "options": {
+                "cwd": "apps/simple-remixjs-with-vercel",
+                "command": "remix dev --manual"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs-with-vercel/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-remixjs-with-vercel",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "apps/simple-remixjs-with-vercel",
+          "projectType": "application",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "simple-nextjs-with-vercel": {
+        "name": "simple-nextjs-with-vercel",
+        "type": "app",
+        "data": {
+          "root": "apps/simple-nextjs-with-vercel",
+          "name": "simple-nextjs-with-vercel",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "build": {
+              "options": {
+                "cwd": "apps/simple-nextjs-with-vercel",
+                "command": "next build"
+              },
+              "dependsOn": [
+                "^build"
+              ],
+              "cache": true,
+              "inputs": [
+                "default",
+                "^default",
+                {
+                  "externalDependencies": [
+                    "next"
+                  ]
+                }
+              ],
+              "outputs": [
+                "{workspaceRoot}/apps/simple-nextjs-with-vercel/.next",
+                "{workspaceRoot}/apps/simple-nextjs-with-vercel/.next/!(cache)"
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "dev": {
+              "options": {
+                "cwd": "apps/simple-nextjs-with-vercel",
+                "command": "next dev"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "start": {
+              "options": {
+                "cwd": "apps/simple-nextjs-with-vercel",
+                "command": "next start"
+              },
+              "dependsOn": [
+                "build"
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "serve-static": {
+              "executor": "@nx/web:file-server",
+              "options": {
+                "buildTarget": "build",
+                "staticFilePath": "apps/simple-nextjs-with-vercel/out",
+                "port": 3000,
+                "spa": false
+              },
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/simple-nextjs-with-vercel",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "stylelint": {
+              "executor": "nx-stylelint:lint",
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.stylelintrc(.(json|yml|yaml|js))?"
+              ],
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-nextjs-with-vercel/**/*.css"
+                ],
+                "fix": true,
+                "formatter": "compact"
+              },
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-nextjs-with-vercel/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-nextjs-with-vercel",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "apps/simple-nextjs-with-vercel",
+          "projectType": "application",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "simple-reactjs-with-i18n": {
+        "name": "simple-reactjs-with-i18n",
+        "type": "app",
+        "data": {
+          "root": "apps/simple-reactjs-with-i18n",
+          "name": "simple-reactjs-with-i18n",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/simple-reactjs-with-i18n",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "build": {
+              "executor": "@nx/vite:build",
+              "outputs": [
+                "{projectRoot}/{options.outputPath}"
+              ],
+              "options": {
+                "outputPath": "apps/simple-reactjs-with-i18n/dist"
+              },
+              "configurations": {}
+            },
+            "dev": {
+              "executor": "@nx/vite:dev-server",
+              "options": {
+                "buildTarget": "simple-reactjs-with-i18n:build"
+              },
+              "configurations": {}
+            },
+            "preview": {
+              "executor": "@nx/vite:preview-server",
+              "options": {
+                "buildTarget": "simple-reactjs-with-i18n:build"
+              },
+              "configurations": {}
+            },
+            "serve-static": {
+              "executor": "@nx/web:file-server",
+              "options": {
+                "buildTarget": "simple-reactjs-with-i18n:build"
+              },
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-reactjs-with-i18n/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-reactjs-with-i18n",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "apps/simple-reactjs-with-i18n/src",
+          "projectType": "application",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "simple-remixjs-with-antd": {
+        "name": "simple-remixjs-with-antd",
+        "type": "app",
+        "data": {
+          "root": "apps/simple-remixjs-with-antd",
+          "name": "simple-remixjs-with-antd",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/simple-remixjs-with-antd",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "stylelint": {
+              "executor": "nx-stylelint:lint",
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.stylelintrc(.(json|yml|yaml|js))?"
+              ],
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs-with-antd/**/*.css"
+                ],
+                "fix": true,
+                "formatter": "compact"
+              },
+              "configurations": {}
+            },
+            "prebuild": {
+              "options": {
+                "cwd": "apps/simple-remixjs-with-antd",
+                "command": "cross-env NODE_ENV=production ts-node --project ./tsconfig.antd.json ./scripts/genAntdCss.tsx"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "build": {
+              "dependsOn": [
+                "prebuild"
+              ],
+              "options": {
+                "cwd": "apps/simple-remixjs-with-antd",
+                "command": "remix build"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "start": {
+              "dependsOn": [
+                "build"
+              ],
+              "options": {
+                "cwd": "apps/simple-remixjs-with-antd",
+                "command": "remix-serve ./build/index.js"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "predev": {
+              "options": {
+                "cwd": "apps/simple-remixjs-with-antd",
+                "command": "ts-node --project tsconfig.antd.json scripts/genAntdCss.tsx"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "dev": {
+              "dependsOn": [
+                "predev"
+              ],
+              "options": {
+                "cwd": "apps/simple-remixjs-with-antd",
+                "command": "remix dev --manual"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs-with-antd/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-remixjs-with-antd",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "projectType": "application",
+          "sourceRoot": "apps/simple-remixjs-with-antd/src",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "simple-remixjs-with-i18n": {
+        "name": "simple-remixjs-with-i18n",
+        "type": "app",
+        "data": {
+          "root": "apps/simple-remixjs-with-i18n",
+          "name": "simple-remixjs-with-i18n",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/simple-remixjs-with-i18n",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "stylelint": {
+              "executor": "nx-stylelint:lint",
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.stylelintrc(.(json|yml|yaml|js))?"
+              ],
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs-with-i18n/**/*.css"
+                ],
+                "fix": true,
+                "formatter": "compact"
+              },
+              "configurations": {}
+            },
+            "build": {
+              "options": {
+                "cwd": "apps/simple-remixjs-with-i18n",
+                "command": "remix build"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "start": {
+              "dependsOn": [
+                "build"
+              ],
+              "options": {
+                "cwd": "apps/simple-remixjs-with-i18n",
+                "command": "remix-serve ./build/index.js"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "dev": {
+              "options": {
+                "cwd": "apps/simple-remixjs-with-i18n",
+                "command": "remix dev --manual"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs-with-i18n/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-remixjs-with-i18n",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "projectType": "application",
+          "sourceRoot": "apps/simple-remixjs-with-i18n/src",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "simple-nextjs-with-auth": {
+        "name": "simple-nextjs-with-auth",
+        "type": "app",
+        "data": {
+          "root": "apps/simple-nextjs-with-auth",
+          "name": "simple-nextjs-with-auth",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "build": {
+              "options": {
+                "cwd": "apps/simple-nextjs-with-auth",
+                "command": "next build"
+              },
+              "dependsOn": [
+                "^build"
+              ],
+              "cache": true,
+              "inputs": [
+                "default",
+                "^default",
+                {
+                  "externalDependencies": [
+                    "next"
+                  ]
+                }
+              ],
+              "outputs": [
+                "{workspaceRoot}/apps/simple-nextjs-with-auth/.next",
+                "{workspaceRoot}/apps/simple-nextjs-with-auth/.next/!(cache)"
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "dev": {
+              "options": {
+                "cwd": "apps/simple-nextjs-with-auth",
+                "command": "next dev"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "start": {
+              "options": {
+                "cwd": "apps/simple-nextjs-with-auth",
+                "command": "next start"
+              },
+              "dependsOn": [
+                "build"
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "serve-static": {
+              "executor": "@nx/web:file-server",
+              "options": {
+                "buildTarget": "build",
+                "staticFilePath": "apps/simple-nextjs-with-auth/out",
+                "port": 3000,
+                "spa": false
+              },
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/simple-nextjs-with-auth",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "stylelint": {
+              "executor": "nx-stylelint:lint",
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.stylelintrc(.(json|yml|yaml|js))?"
+              ],
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-nextjs-with-auth/**/*.css"
+                ],
+                "fix": true,
+                "formatter": "compact"
+              },
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-nextjs-with-auth/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-nextjs-with-auth",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "apps/simple-nextjs-with-auth",
+          "projectType": "application",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "@remix-app-generators": {
+        "name": "@remix-app-generators",
+        "type": "lib",
+        "data": {
+          "root": "libs/@remix-app-generators",
+          "name": "@remix-app-generators",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "libs/@remix-app-generators",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "libs/@remix-app-generators/**/*.{ts,tsx,js,jsx}"
+                ],
+                "fix": true
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "libs/@remix-app-generators",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            },
+            "test": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "libs/@remix-app-generators",
+                "commands": [
+                  "echo '@remix-app-generator is deprecated' # jest"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "libs/@remix-app-generators/src",
+          "projectType": "library",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "typescript-utilities": {
+        "name": "typescript-utilities",
+        "type": "lib",
+        "data": {
+          "root": "libs/typescript-utilities",
+          "targets": {
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "libs/typescript-utilities",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "libs/typescript-utilities/**/*.{ts,tsx,js,jsx}"
+                ],
+                "fix": true
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "libs/typescript-utilities",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "name": "typescript-utilities",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "libs/typescript-utilities/src",
+          "projectType": "library",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "simple-remix-vite": {
+        "name": "simple-remix-vite",
+        "type": "app",
+        "data": {
+          "root": "apps/simple-remix-vite",
+          "name": "simple-remix-vite",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/simple-remix-vite",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "stylelint": {
+              "executor": "nx-stylelint:lint",
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.stylelintrc(.(json|yml|yaml|js))?"
+              ],
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remix-vite/**/*.css"
+                ],
+                "fix": true,
+                "formatter": "compact"
+              },
+              "configurations": {}
+            },
+            "build": {
+              "options": {
+                "cwd": "apps/simple-remix-vite",
+                "command": "remix vite:build"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "start": {
+              "dependsOn": [
+                "build"
+              ],
+              "options": {
+                "cwd": "apps/simple-remix-vite",
+                "command": "remix-serve ./build/server/index.js"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "dev": {
+              "options": {
+                "cwd": "apps/simple-remix-vite",
+                "command": "remix vite:dev"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remix-vite/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-remix-vite",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "projectType": "application",
+          "sourceRoot": "apps/simple-remix-vite/src",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "simple-reactjs": {
+        "name": "simple-reactjs",
+        "type": "app",
+        "data": {
+          "root": "apps/simple-reactjs",
+          "name": "simple-reactjs",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/simple-reactjs",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "build": {
+              "executor": "@nx/vite:build",
+              "outputs": [
+                "{projectRoot}/{options.outputPath}"
+              ],
+              "options": {
+                "outputPath": "apps/simple-reactjs/dist"
+              },
+              "configurations": {}
+            },
+            "dev": {
+              "executor": "@nx/vite:dev-server",
+              "options": {
+                "buildTarget": "simple-reactjs:build"
+              },
+              "configurations": {}
+            },
+            "preview": {
+              "executor": "@nx/vite:preview-server",
+              "options": {
+                "buildTarget": "simple-reactjs:build"
+              },
+              "configurations": {}
+            },
+            "serve-static": {
+              "executor": "@nx/web:file-server",
+              "options": {
+                "buildTarget": "simple-reactjs:build"
+              },
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-reactjs/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-reactjs",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "apps/simple-reactjs/src",
+          "projectType": "application",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "simple-remixjs": {
+        "name": "simple-remixjs",
+        "type": "app",
+        "data": {
+          "root": "apps/simple-remixjs",
+          "name": "simple-remixjs",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/simple-remixjs",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "stylelint": {
+              "executor": "nx-stylelint:lint",
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.stylelintrc(.(json|yml|yaml|js))?"
+              ],
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs/**/*.css"
+                ],
+                "fix": true,
+                "formatter": "compact"
+              },
+              "configurations": {}
+            },
+            "build": {
+              "options": {
+                "cwd": "apps/simple-remixjs",
+                "command": "remix build"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "start": {
+              "dependsOn": [
+                "build"
+              ],
+              "options": {
+                "cwd": "apps/simple-remixjs",
+                "command": "remix-serve ./build/index.js"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "dev": {
+              "options": {
+                "cwd": "apps/simple-remixjs",
+                "command": "remix dev --manual"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-remixjs/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-remixjs",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "projectType": "application",
+          "sourceRoot": "apps/simple-remixjs/src",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "eslint-rules": {
+        "name": "eslint-rules",
+        "type": "lib",
+        "data": {
+          "root": "tools/eslint-rules",
+          "targets": {
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "tools/eslint-rules",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "test": {
+              "executor": "@nx/jest:jest",
+              "outputs": [
+                "{workspaceRoot}/coverage/{projectRoot}"
+              ],
+              "options": {
+                "jestConfig": "tools/eslint-rules/jest.config.ts"
+              },
+              "configurations": {}
+            }
+          },
+          "name": "eslint-rules",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "tools/eslint-rules",
+          "implicitDependencies": [],
+          "tags": []
+        }
+      },
+      "simple-nextjs": {
+        "name": "simple-nextjs",
+        "type": "app",
+        "data": {
+          "root": "apps/simple-nextjs",
+          "name": "simple-nextjs",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "build": {
+              "options": {
+                "cwd": "apps/simple-nextjs",
+                "command": "next build"
+              },
+              "dependsOn": [
+                "^build"
+              ],
+              "cache": true,
+              "inputs": [
+                "default",
+                "^default",
+                {
+                  "externalDependencies": [
+                    "next"
+                  ]
+                }
+              ],
+              "outputs": [
+                "{workspaceRoot}/apps/simple-nextjs/.next",
+                "{workspaceRoot}/apps/simple-nextjs/.next/!(cache)"
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "dev": {
+              "options": {
+                "cwd": "apps/simple-nextjs",
+                "command": "next dev"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "start": {
+              "options": {
+                "cwd": "apps/simple-nextjs",
+                "command": "next start"
+              },
+              "dependsOn": [
+                "build"
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "serve-static": {
+              "executor": "@nx/web:file-server",
+              "options": {
+                "buildTarget": "build",
+                "staticFilePath": "apps/simple-nextjs/out",
+                "port": 3000,
+                "spa": false
+              },
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "apps/simple-nextjs",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "stylelint": {
+              "executor": "nx-stylelint:lint",
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.stylelintrc(.(json|yml|yaml|js))?"
+              ],
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-nextjs/**/*.css"
+                ],
+                "fix": true,
+                "formatter": "compact"
+              },
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/simple-nextjs/**/*.{js,ts,jsx,tsx}"
+                ],
+                "fix": true,
+                "ignorePath": ".eslintignore"
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "apps/simple-nextjs",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "apps/simple-nextjs",
+          "projectType": "application",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "utilities": {
+        "name": "utilities",
+        "type": "lib",
+        "data": {
+          "root": "libs/utilities",
+          "targets": {
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "libs/utilities",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "libs/utilities/**/*.ts",
+                  "libs/utilities/package.json"
+                ],
+                "fix": true
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "libs/utilities",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            },
+            "test": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "libs/utilities",
+                "commands": [
+                  "jest"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "name": "utilities",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "libs/utilities/src",
+          "projectType": "library",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "services": {
+        "name": "services",
+        "type": "lib",
+        "data": {
+          "root": "libs/services",
+          "targets": {
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "libs/services",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "libs/services/**/*.ts",
+                  "libs/services/package.json"
+                ],
+                "fix": true
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "libs/services",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            },
+            "test": {
+              "executor": "@nx/jest:jest",
+              "outputs": [
+                "{workspaceRoot}/coverage/{projectRoot}"
+              ],
+              "options": {
+                "jestConfig": "libs/services/jest.config.ts",
+                "passWithNoTests": true
+              },
+              "configurations": {
+                "ci": {
+                  "ci": true,
+                  "codeCoverage": true
+                }
+              }
+            }
+          },
+          "name": "services",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "libs/services/src",
+          "projectType": "library",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "reactjs": {
+        "name": "reactjs",
+        "type": "lib",
+        "data": {
+          "root": "libs/reactjs",
+          "targets": {
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "libs/reactjs",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "stylelint": {
+              "executor": "nx-stylelint:lint",
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.stylelintrc(.(json|yml|yaml|js))?"
+              ],
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "libs/reactjs/**/*.css"
+                ],
+                "fix": true,
+                "formatter": "compact"
+              },
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "libs/reactjs/**/*.{ts,tsx,js,jsx}"
+                ],
+                "fix": true
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "libs/reactjs",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            },
+            "test": {
+              "executor": "@nx/jest:jest",
+              "outputs": [
+                "{workspaceRoot}/coverage/{projectRoot}"
+              ],
+              "options": {
+                "jestConfig": "libs/reactjs/jest.config.ts",
+                "passWithNoTests": true
+              },
+              "configurations": {
+                "ci": {
+                  "ci": true,
+                  "codeCoverage": true
+                }
+              }
+            },
+            "storybook": {
+              "executor": "@nx/storybook:storybook",
+              "options": {
+                "port": 4400,
+                "configDir": "libs/reactjs/.storybook"
+              },
+              "configurations": {
+                "ci": {
+                  "quiet": true
+                }
+              }
+            },
+            "build-storybook": {
+              "executor": "@nx/storybook:build",
+              "outputs": [
+                "{options.outputDir}"
+              ],
+              "options": {
+                "outputDir": "libs/reactjs/dist/storybook/reactjs",
+                "configDir": "libs/reactjs/.storybook"
+              },
+              "configurations": {
+                "ci": {
+                  "quiet": true
+                }
+              }
+            },
+            "static-storybook": {
+              "executor": "@nx/web:file-server",
+              "options": {
+                "buildTarget": "reactjs:build-storybook",
+                "staticFilePath": "libs/reactjs/dist/storybook/reactjs"
+              },
+              "configurations": {
+                "ci": {
+                  "buildTarget": "reactjs:build-storybook:ci"
+                }
+              }
+            }
+          },
+          "name": "reactjs",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "libs/reactjs/src",
+          "projectType": "library",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "remixjs": {
+        "name": "remixjs",
+        "type": "lib",
+        "data": {
+          "root": "libs/remixjs",
+          "targets": {
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "libs/remixjs",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "libs/remixjs/**/*.{ts,tsx,js,jsx}"
+                ],
+                "fix": true
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "libs/remixjs",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            },
+            "test": {
+              "executor": "@nx/jest:jest",
+              "outputs": [
+                "{workspaceRoot}/coverage/{projectRoot}"
+              ],
+              "options": {
+                "jestConfig": "libs/remixjs/jest.config.ts",
+                "passWithNoTests": true
+              },
+              "configurations": {
+                "ci": {
+                  "ci": true,
+                  "codeCoverage": true
+                }
+              }
+            }
+          },
+          "name": "remixjs",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "libs/remixjs/src",
+          "projectType": "library",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "assets": {
+        "name": "assets",
+        "type": "lib",
+        "data": {
+          "root": "libs/assets",
+          "name": "assets",
+          "targets": {
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "eslint:lint": {
+              "cache": true,
+              "options": {
+                "cwd": "libs/assets",
+                "command": "eslint ."
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.js",
+                "{projectRoot}/.eslintrc.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "lint": {
+              "executor": "@nx/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "libs/assets/**/*.{ts,tsx,js,jsx}"
+                ],
+                "fix": true
+              },
+              "configurations": {}
+            },
+            "typecheck": {
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "libs/assets",
+                "commands": [
+                  "tsc -p tsconfig.json --noEmit"
+                ]
+              },
+              "configurations": {}
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "libs/assets/src",
+          "projectType": "library",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      }
+    },
+    "dependencies": {
+      "express-for-boilerplates-with-restful-api": [],
+      "reactjs-crud-boilerplate-with-restful-api": [
+        {
+          "source": "reactjs-crud-boilerplate-with-restful-api",
+          "target": "reactjs",
+          "type": "static"
+        },
+        {
+          "source": "reactjs-crud-boilerplate-with-restful-api",
+          "target": "remixjs",
+          "type": "static"
+        },
+        {
+          "source": "reactjs-crud-boilerplate-with-restful-api",
+          "target": "utilities",
+          "type": "static"
+        },
+        {
+          "source": "reactjs-crud-boilerplate-with-restful-api",
+          "target": "typescript-utilities",
+          "type": "static"
+        },
+        {
+          "source": "reactjs-crud-boilerplate-with-restful-api",
+          "target": "undefined",
+          "type": "static"
+        }
+      ],
+      "remixjs-crud-boilerplate-with-restful-api": [
+        {
+          "source": "remixjs-crud-boilerplate-with-restful-api",
+          "target": "reactjs",
+          "type": "static"
+        },
+        {
+          "source": "remixjs-crud-boilerplate-with-restful-api",
+          "target": "remixjs",
+          "type": "static"
+        },
+        {
+          "source": "remixjs-crud-boilerplate-with-restful-api",
+          "target": "utilities",
+          "type": "static"
+        },
+        {
+          "source": "remixjs-crud-boilerplate-with-restful-api",
+          "target": "typescript-utilities",
+          "type": "static"
+        },
+        {
+          "source": "remixjs-crud-boilerplate-with-restful-api",
+          "target": "undefined",
+          "type": "static"
+        }
+      ],
+      "undefined": [],
+      "simple-remixjs-with-https-electron": [
+        {
+          "source": "simple-remixjs-with-https-electron",
+          "target": "reactjs",
+          "type": "static"
+        },
+        {
+          "source": "simple-remixjs-with-https-electron",
+          "target": "undefined",
+          "type": "static"
+        }
+      ],
+      "simple-remixjs-with-http-electron": [
+        {
+          "source": "simple-remixjs-with-http-electron",
+          "target": "undefined",
+          "type": "static"
+        }
+      ],
+      "simple-remixjs-with-toast-server": [
+        {
+          "source": "simple-remixjs-with-toast-server",
+          "target": "reactjs",
+          "type": "static"
+        },
+        {
+          "source": "simple-remixjs-with-toast-server",
+          "target": "undefined",
+          "type": "static"
+        }
+      ],
+      "simple-remix-vite-with-vercel": [
+        {
+          "source": "simple-remix-vite-with-vercel",
+          "target": "undefined",
+          "type": "static"
+        }
+      ],
+      "simple-remixjs-with-capacitor": [
+        {
+          "source": "simple-remixjs-with-capacitor",
+          "target": "reactjs",
+          "type": "static"
+        },
+        {
+          "source": "simple-remixjs-with-capacitor",
+          "target": "undefined",
+          "type": "static"
+        }
+      ],
+      "simple-remixjs-with-auth-2fa": [
+        {
+          "source": "simple-remixjs-with-auth-2fa",
+          "target": "remixjs",
+          "type": "static"
+        },
+        {
+          "source": "simple-remixjs-with-auth-2fa",
+          "target": "reactjs",
+          "type": "static"
+        },
+        {
+          "source": "simple-remixjs-with-auth-2fa",
+          "target": "undefined",
+          "type": "static"
+        }
+      ],
+      "simple-remixjs-with-graphql": [
+        {
+          "source": "simple-remixjs-with-graphql",
+          "target": "remixjs",
+          "type": "static"
+        },
+        {
+          "source": "simple-remixjs-with-graphql",
+          "target": "reactjs",
+          "type": "static"
+        },
+        {
+          "source": "simple-remixjs-with-graphql",
+          "target": "utilities",
+          "type": "static"
+        },
+        {
+          "source": "simple-remixjs-with-graphql",
+          "target": "undefined",
+          "type": "static"
+        }
+      ],
+      "simple-remixjs-with-sitemap": [
+        {
+          "source": "simple-remixjs-with-sitemap",
+          "target": "reactjs",
+          "type": "static"
+        },
+        {
+          "source": "simple-remixjs-with-sitemap",
+          "target": "remixjs",
+          "type": "static"
+        },
+        {
+          "source": "simple-remixjs-with-sitemap",
+          "target": "undefined",
+          "type": "static"
+        }
+      ],
+      "simple-reactjs-with-sentry": [
+        {
+          "source": "simple-reactjs-with-sentry",
+          "target": "undefined",
+          "type": "static"
+        }
+      ],
+      "simple-reactjs-with-vercel": [
+        {
+          "source": "simple-reactjs-with-vercel",
+          "target": "undefined",
+          "type": "static"
+        }
+      ],
+      "simple-remixjs-with-sentry": [
+        {
+          "source": "simple-remixjs-with-sentry",
+          "target": "reactjs",
+          "type": "static"
+        },
+        {
+          "source": "simple-remixjs-with-sentry",
+          "target": "undefined",
+          "type": "static"
+        },
+        {
+          "source": "simple-remixjs-with-sentry",
+          "target": "utilities",
+          "type": "static"
+        }
+      ],
+      "simple-remixjs-with-vercel": [
+        {
+          "source": "simple-remixjs-with-vercel",
+          "target": "undefined",
+          "type": "static"
+        }
+      ],
+      "simple-nextjs-with-vercel": [
+        {
+          "source": "simple-nextjs-with-vercel",
+          "target": "undefined",
+          "type": "static"
+        }
+      ],
+      "simple-reactjs-with-i18n": [
+        {
+          "source": "simple-reactjs-with-i18n",
+          "target": "undefined",
+          "type": "static"
+        }
+      ],
+      "simple-remixjs-with-antd": [
+        {
+          "source": "simple-remixjs-with-antd",
+          "target": "undefined",
+          "type": "static"
+        }
+      ],
+      "simple-remixjs-with-i18n": [
+        {
+          "source": "simple-remixjs-with-i18n",
+          "target": "remixjs",
+          "type": "static"
+        },
+        {
+          "source": "simple-remixjs-with-i18n",
+          "target": "reactjs",
+          "type": "static"
+        },
+        {
+          "source": "simple-remixjs-with-i18n",
+          "target": "undefined",
+          "type": "static"
+        }
+      ],
+      "simple-nextjs-with-auth": [
+        {
+          "source": "simple-nextjs-with-auth",
+          "target": "undefined",
+          "type": "static"
+        },
+        {
+          "source": "simple-nextjs-with-auth",
+          "target": "utilities",
+          "type": "static"
+        }
+      ],
+      "@remix-app-generators": [],
+      "typescript-utilities": [],
+      "simple-remix-vite": [
+        {
+          "source": "simple-remix-vite",
+          "target": "undefined",
+          "type": "static"
+        }
+      ],
+      "simple-reactjs": [
+        {
+          "source": "simple-reactjs",
+          "target": "undefined",
+          "type": "static"
+        }
+      ],
+      "simple-remixjs": [
+        {
+          "source": "simple-remixjs",
+          "target": "reactjs",
+          "type": "static"
+        },
+        {
+          "source": "simple-remixjs",
+          "target": "undefined",
+          "type": "static"
+        }
+      ],
+      "eslint-rules": [],
+      "simple-nextjs": [
+        {
+          "source": "simple-nextjs",
+          "target": "undefined",
+          "type": "static"
+        }
+      ],
+      "utilities": [
+        {
+          "source": "utilities",
+          "target": "typescript-utilities",
+          "type": "static"
+        }
+      ],
+      "services": [],
+      "reactjs": [
+        {
+          "source": "reactjs",
+          "target": "utilities",
+          "type": "static"
+        },
+        {
+          "source": "reactjs",
+          "target": "utilities",
+          "type": "dynamic"
+        },
+        {
+          "source": "reactjs",
+          "target": "typescript-utilities",
+          "type": "static"
+        }
+      ],
+      "remixjs": [
+        {
+          "source": "remixjs",
+          "target": "utilities",
+          "type": "static"
+        },
+        {
+          "source": "remixjs",
+          "target": "reactjs",
+          "type": "static"
+        },
+        {
+          "source": "remixjs",
+          "target": "typescript-utilities",
+          "type": "static"
+        }
+      ],
+      "assets": []
+    }
+  },
+  "affectedProjects": [],
+  "criticalPath": []
+}

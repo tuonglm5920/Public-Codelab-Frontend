@@ -1,0 +1,56 @@
+.Alert__container .yy-alert-message {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.Alert__container .yy-alert-icon {
+  font-size: 36px;
+  margin-right: 12px;
+  margin-top: 8px;
+}
+
+/* Bold */
+.Alert--bold .yy-alert-message,
+.Alert--bold .yy-alert-description {
+  color: var(--yy-color-white) !important;
+}
+.Alert--bold.yy-alert-info {
+  background: var(--yy-color-info);
+}
+.Alert--bold.yy-alert-info .yy-alert-icon {
+  color: var(--yy-color-info-bg);
+}
+.Alert--bold.yy-alert-success {
+  background: var(--yy-color-success-active);
+}
+.Alert--bold.yy-alert-success .yy-alert-icon {
+  color: var(--yy-color-success-bg);
+}
+.Alert--bold.yy-alert-error {
+  background: var(--yy-color-error);
+}
+.Alert--bold.yy-alert-error .yy-alert-icon {
+  color: var(--yy-color-error-bg);
+}
+.Alert--bold.yy-alert-warning {
+  background: var(--yy-color-warning);
+}
+.Alert--bold.yy-alert-warning .yy-alert-icon {
+  color: var(--yy-color-warning-bg);
+}
+.Alert--bold.Alert--primary {
+  background: var(--yy-color-primary);
+}
+.Alert--bold.Alert--primary .yy-alert-icon {
+  color: var(--yy-color-primary-bg);
+}
+
+/* Outline */
+
+.Alert--outline.Alert--primary {
+  background: var(--yy-color-primary-bg);
+  border-color: var(--yy-color-primary);
+}
+.Alert--outline.Alert--primary .yy-alert-icon {
+  color: var(--yy-color-primary);
+}

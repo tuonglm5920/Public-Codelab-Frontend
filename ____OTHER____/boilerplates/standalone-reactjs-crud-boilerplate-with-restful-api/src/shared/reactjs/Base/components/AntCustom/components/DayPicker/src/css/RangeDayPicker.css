@@ -1,0 +1,11 @@
+.RangeDayPicker__container {
+  width: 100%;
+}
+
+.RangeDayPicker__popup .yy-picker-time-panel:has(.yy-picker-content:empty) {
+  display: none;
+}
+
+.RangeDayPicker__readOnly {
+  pointer-events: none;
+}

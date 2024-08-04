@@ -1,0 +1,90 @@
+/* Color for type text */
+.Button__container.yy-btn-text.Button--primary:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost) {
+  color: var(--yy-color-primary);
+}
+.Button__container.yy-btn-text.Button--primary:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):hover {
+  background-color: var(--yy-color-primary-hover);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-text.Button--primary:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):active {
+  background-color: var(--yy-color-primary-active);
+  color: var(--yy-color-text-light-solid);
+}
+
+.Button__container.yy-btn-text.Button--success:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost) {
+  color: var(--yy-color-success);
+}
+.Button__container.yy-btn-text.Button--success:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):hover {
+  background-color: var(--yy-color-success-hover);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-text.Button--success:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):active {
+  background-color: var(--yy-color-success-active);
+  color: var(--yy-color-text-light-solid);
+}
+
+.Button__container.yy-btn-text.Button--error:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost) {
+  color: var(--yy-color-error);
+}
+.Button__container.yy-btn-text.Button--error:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):hover {
+  background-color: var(--yy-color-error-hover);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-text.Button--error:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):active {
+  background-color: var(--yy-color-error-active);
+  color: var(--yy-color-text-light-solid);
+}
+
+.Button__container.yy-btn-text.Button--info:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost) {
+  color: var(--yy-color-info);
+}
+.Button__container.yy-btn-text.Button--info:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):hover {
+  background-color: var(--yy-color-info-hover);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-text.Button--info:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):active {
+  background-color: var(--yy-color-info-active);
+  color: var(--yy-color-text-light-solid);
+}
+
+.Button__container.yy-btn-text.Button--warning:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost) {
+  color: var(--yy-color-warning);
+}
+.Button__container.yy-btn-text.Button--warning:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):hover {
+  background-color: var(--yy-color-warning-hover);
+  color: var(--yy-color-text-light-solid);
+}
+.Button__container.yy-btn-text.Button--warning:not(:disabled):not(
+    .yy-btn-disabled
+  ):not(.yy-btn-background-ghost):active {
+  background-color: var(--yy-color-warning-active);
+  color: var(--yy-color-text-light-solid);
+}

@@ -1,0 +1,13 @@
+.AutoComplete__container {
+  width: 100%;
+}
+
+.AutoComplete__loading {
+  padding-bottom: 16px;
+  padding-top: 16px;
+  text-align: center;
+}
+
+.AutoComplete__readOnly {
+  pointer-events: none;
+}

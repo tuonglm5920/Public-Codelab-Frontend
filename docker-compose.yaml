@@ -1,0 +1,20 @@
+version: "1.0"
+
+services:
+  remixjs-crud-boilerplate-with-restful-api:
+    build:
+      context: .
+      dockerfile: ./apps/remixjs-crud-boilerplate-with-restful-api/Dockerfile
+    ports:
+      - "2301:3000"
+    volumes:
+      - ./apps/remixjs-crud-boilerplate-with-restful-api:/app
+
+  reactjs-crud-boilerplate-with-restful-api:
+    build:
+      context: .
+      dockerfile: ./apps/reactjs-crud-boilerplate-with-restful-api/Dockerfile
+    ports:
+      - "2302:80"
+    volumes:
+      - ./apps/reactjs-crud-boilerplate-with-restful-api:/app

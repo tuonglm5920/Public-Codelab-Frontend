@@ -1,0 +1,11 @@
+.RangeTimePicker__container {
+  width: 100%;
+}
+
+.RangeTimePicker__popup .yy-picker-time-panel:has(.yy-picker-content:empty) {
+  display: none;
+}
+
+.RangeTimePicker__readOnly {
+  pointer-events: none;
+}

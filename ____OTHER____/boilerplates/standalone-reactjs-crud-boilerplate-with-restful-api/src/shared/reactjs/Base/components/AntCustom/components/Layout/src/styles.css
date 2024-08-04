@@ -1,0 +1,20 @@
+.Layout__sider {
+  border-right: 1px solid var(--yy-color-split);
+}
+
+.Layout__header {
+  background-color: #fff;
+  border-bottom: 1px solid var(--yy-color-split);
+  padding-left: var(--yy-padding-lg);
+  padding-right: var(--yy-padding-lg);
+}
+
+.Layout__content {
+  padding: 16px;
+  padding-bottom: 0px !important;
+}
+@media (min-width: 768px) {
+  .Layout__content {
+    padding: 32px;
+  }
+}

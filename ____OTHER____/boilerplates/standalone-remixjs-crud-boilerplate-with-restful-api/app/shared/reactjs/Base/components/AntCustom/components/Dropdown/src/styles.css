@@ -1,0 +1,11 @@
+.Dropdown__divider {
+  margin: 0;
+}
+
+.Dropdown__footer {
+  padding: var(--yy-padding-xxs);
+}
+
+.Dropdown__overlay [hidden] {
+  display: none !important;
+}

@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "isolatedModules": true,
+    "lib": ["DOM", "DOM.Iterable", "ES2019"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "resolveJsonModule": true,
+    "rootDir": ".",
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "tsBuildInfoFile": null,
+    "target": "ESNext",
+    "paths": {
+      "assets": ["libs/assets/src/index.ts"],
+      "reactjs": ["libs/reactjs/src/index.ts"],
+      "remixjs/client": ["libs/remixjs/src/client.ts"],
+      "remixjs/server": ["libs/remixjs/src/server.ts"],
+      "services": ["libs/services/src/index.ts"],
+      "typescript-utilities": ["libs/typescript-utilities/src/index.ts"],
+      "utilities": ["libs/utilities/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "____OTHER____"]
+}

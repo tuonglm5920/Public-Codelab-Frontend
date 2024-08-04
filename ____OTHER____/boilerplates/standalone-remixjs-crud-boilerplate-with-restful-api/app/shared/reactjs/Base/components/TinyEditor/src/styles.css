@@ -1,0 +1,15 @@
+.TinyEditor__container .tox .tox-edit-area::before {
+  display: none !important;
+}
+
+.TinyEditor__container .tox-statusbar {
+  display: none !important;
+}
+
+.TinyEditor__container .tox.tox-tinymce {
+  border-radius: var(--yy-border-radius) !important;
+  transition: 0.2s border !important;
+}
+.TinyEditor__container .tox.tox-tinymce.tox-edit-focus {
+  border-color: var(--yy-color-primary) !important;
+}

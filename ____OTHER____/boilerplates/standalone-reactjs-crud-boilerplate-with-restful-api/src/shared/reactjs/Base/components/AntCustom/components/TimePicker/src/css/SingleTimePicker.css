@@ -1,0 +1,11 @@
+.SingleTimePicker__container {
+  width: 100%;
+}
+
+.SingleTimePicker__popup .yy-picker-time-panel:has(.yy-picker-content:empty) {
+  display: none;
+}
+
+.SingleTimePicker__readOnly {
+  pointer-events: none;
+}

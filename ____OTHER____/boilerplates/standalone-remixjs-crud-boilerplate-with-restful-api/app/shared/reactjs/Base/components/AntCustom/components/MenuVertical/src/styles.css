@@ -1,0 +1,15 @@
+.MenuVertical__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.MenuVertical__menu.yy-menu-root.yy-menu-inline {
+  border: none;
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
+.MenuVertical__container [hidden] {
+  display: none !important;
+}

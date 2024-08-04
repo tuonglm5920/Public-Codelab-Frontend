@@ -1,0 +1,33 @@
+.yy-notification-notice {
+  border-radius: var(--yy-border-radius-lg) !important;
+}
+.yy-notification-notice-message {
+  font-weight: 500;
+}
+
+.Notification--primary .yy-notification-notice-icon {
+  color: var(--yy-color-primary) !important;
+}
+/* Bold */
+.Notification--bold.yy-notification-notice-info {
+  background-color: var(--yy-color-info) !important;
+}
+.Notification--bold.yy-notification-notice-error {
+  background-color: var(--yy-color-error) !important;
+}
+.Notification--bold.yy-notification-notice-success {
+  background-color: var(--yy-color-success-active) !important;
+}
+.Notification--bold.yy-notification-notice-warning {
+  background-color: var(--yy-color-warning) !important;
+}
+.Notification--bold.Notification--primary {
+  background-color: var(--yy-color-primary) !important;
+}
+
+.Notification--bold .yy-notification-notice-icon,
+.Notification--bold .yy-notification-notice-message,
+.Notification--bold .yy-notification-notice-description,
+.Notification--bold .yy-notification-notice-close {
+  color: var(--yy-color-white) !important;
+}

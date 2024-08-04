@@ -1,0 +1,7 @@
+.Mentions__readOnly {
+  pointer-events: none;
+}
+
+.Mentions__popup.yy-mentions-dropdown .yy-mentions-dropdown-menu-item-disabled {
+  background-color: initial !important;
+}
